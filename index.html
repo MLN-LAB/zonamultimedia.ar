@@ -23,20 +23,20 @@
         .subnav {
             background-color: #eee;
             text-align: center;
-            padding: 5px 0; /* Reducir el padding vertical */
-            margin-bottom: 10px; /* Espacio entre subnav y main */
+            padding: 5px 0; 
+            margin-bottom: 10px;
         }
 
         .subnav-text {
             font-weight: bold;
-            font-size: 14px; /* Reducir el tamaño de la fuente */
+            font-size: 14px; 
         }
 
         nav {
-            text-align: right; /* Alinear el texto a la derecha */
-            margin-right: 20px; /* Margen derecho para separar del borde */
-            margin-left: auto; /* Centrar a la derecha */
-            margin-bottom: 10px; /* Espacio entre nav y main */
+            text-align: right;
+            margin-right: 20px; 
+            margin-left: auto; 
+            margin-bottom: 10px; 
         }
 
         nav a {
@@ -67,11 +67,11 @@
         .service-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px; /* Espacio entre los cuadros */
+            gap: 20px; 
         }
 
         .service-box {
-            flex: 1 1 calc(30% - 20px); /* Tamaño de cada cuadro (30% ancho, menos el espacio entre ellos) */
+            flex: 1 1 calc(30% - 20px); 
             border: 1px solid #ccc;
             padding: 20px;
             text-align: center;
@@ -142,7 +142,7 @@
                 </div>
                 <div class="service-box">
                     <h3>Reparación de Equipos</h3>
-                    <p>Reparamos PC, notebooks e impresoras, monitores, garantizando un servicio técnico de calidad y confianza.</p>
+                    <p>Reparamos PC, notebooks, impresoras, monitores, garantizando un servicio técnico de calidad y confianza.</p>
                 </div>
                 <div class="service-box">
                     <h3>Recuperación de Datos</h3>
@@ -192,7 +192,7 @@
 
             links.forEach(link => {
                 link.addEventListener('click', function (event) {
-                    event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+                    event.preventDefault(); 
                     const sectionId = this.id.replace('-link', '');
                     showSection(sectionId);
                 });
