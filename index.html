@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi pagina web</title>
+    <title>Mi página web</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,11 +17,26 @@
             color: #fff;
             padding: 10px 0;
             text-align: center;
+            margin-bottom: 20px; /* Espacio entre header y nav */
+        }
+
+        .subnav {
+            background-color: #eee;
+            text-align: center;
+            padding: 5px 0; /* Reducir el padding vertical */
+            margin-bottom: 10px; /* Espacio entre subnav y main */
+        }
+
+        .subnav-text {
+            font-weight: bold;
+            font-size: 14px; /* Reducir el tamaño de la fuente */
         }
 
         nav {
-            text-align: center;
-            margin: 20px 0;
+            text-align: right; /* Alinear el texto a la derecha */
+            margin-right: 20px; /* Margen derecho para separar del borde */
+            margin-left: auto; /* Centrar a la derecha */
+            margin-bottom: 10px; /* Espacio entre nav y main */
         }
 
         nav a {
@@ -75,29 +90,40 @@
 </head>
 <body>
     <header>
-        <h1>Bienvenidos</h1>
+        <h1>Zona Multimedia</h1>
     </header>
+
+    <div class="subnav">
+        <p class="subnav-text">Hardware & Software</p>
+    </div>
 
     <nav>
         <a id="inicio-link">Inicio</a>
-        <a id="sobre-mi-link">Sobre Mí</a>
+        <a id="productos-link">Productos</a>
         <a id="contacto-link">Contacto</a>
     </nav>
 
     <main>
         <div id="inicio" class="section active">
             <h2>Inicio</h2>
-            <p>Página de inicio. ¡Disfruta navegando!</p>
+            <div class="centered-text">
+                <p><strong>Productos de informática: </strong></p> 
+                <p>PC Escritorio - Notebooks - Monitores</p>
+                <p>Impresoras - Accesorios - Teclados - Mouses - Parlantes - Conectividad</p>
+                <p>Insumos - Tintas - Toners - Seguridad Informática - UPS</p> 
+                <p>Estabilizadores - Software</p>
+                <p><strong>Servicio Técnico especializado</strong></p>
+            </div>
         </div>
 
-        <div id="sobre-mi" class="section">
-            <h2>Sobre Mí</h2>
-           <p>Bienvenidos. Visitenos en Facebook <a href="https://www.facebook.com/zonamultimedia.com.ar/">Facebook</a></p>
+        <div id="productos" class="section">
+            <h2>Productos</h2>
+            <p>Bienvenidos. Visítenos en Facebook <a href="https://www.facebook.com/zonamultimedia.com.ar/">Facebook</a></p>
         </div>
 
         <div id="contacto" class="section">
             <h2>Contacto</h2>
-            <p>Puedes contactarme a través del siguiente formulario:</p>
+            <p>Puede contactarnos a través del siguiente formulario:</p>
             <form id="contact-form">
                 <label for="name">Nombre:</label><br>
                 <input type="text" id="name" name="name"><br><br>
@@ -111,7 +137,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Mi Página Mejorada</p>
+        <p>&copy; 2024 Zona Multimedia</p>
     </footer>
 
     <script>
@@ -140,7 +166,7 @@
                 const message = document.getElementById('message').value;
 
                 if (name && email && message) {
-                    alert(`Gracias por contactarme, ${name}. Te responderé pronto.`);
+                    alert(`Gracias por contactarnos, ${name}. Te responderemos pronto.`);
                     document.getElementById('contact-form').reset();
                 } else {
                     alert('Por favor, completa todos los campos del formulario.');
