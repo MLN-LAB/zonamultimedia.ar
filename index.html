@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zona Multimedia</title>
+    <title>Mi página web</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #adb5bd;
         }
 
         header {
-            background-color: #333;
+            background-color: #031633;
             color: #fff;
             padding: 10px 0;
             text-align: center;
-            margin-bottom: 20px; /* Espacio entre header y nav */
+            margin-bottom: 20px; 
         }
 
         .subnav {
-            background-color: #eee;
+            background-color: #052c65;
             text-align: center;
             padding: 5px 0; 
-            margin-bottom: 10px;
+            margin-bottom: 10px; 
         }
 
         .subnav-text {
@@ -32,9 +32,27 @@
             font-size: 14px; 
         }
 
+        .topbar {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .topbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .topbar a:hover {
+            color: #007BFF;
+        }
+
         nav {
-            text-align: right;
-            margin-right: 20px; 
+            text-align: right; 
+            margin-right: 20px;
             margin-left: auto; 
             margin-bottom: 10px; 
         }
@@ -93,14 +111,23 @@
     </style>
 </head>
 <body>
+    <!-- Barra superior -->
+    <div class="topbar">
+        <a href="#">Hardware & Software</a>
+        
+    </div>
+
+    <!-- Encabezado -->
     <header>
         <h1>Zona Multimedia</h1>
     </header>
 
-    <div class="subnav">
+   <!-- Subnavegación -->
+   <!--   <div class="subnav">
         <p class="subnav-text">Hardware & Software</p>
-    </div>
+    </div> -->
 
+    <!-- Navegación principal -->
     <nav>
         <a href="#" id="inicio-link">Inicio</a>
         <a href="#" id="productos-link">Productos</a>
@@ -108,15 +135,16 @@
         <a href="#" id="contacto-link">Contacto</a>
     </nav>
 
+    <!-- Contenido principal -->
     <main>
         <div id="inicio" class="section active">
             <h2>Bienvenidos</h2>
             <div class="centered-text">
                 <p><strong>Productos de informática: </strong></p> 
 				<p>   </p>
-                <p>PC Escritorio - Notebooks - Monitores</p>
-                <p>Impresoras - Accesorios - Teclados - Mouses - Parlantes - Conectividad</p>
-                <p>Insumos - Tintas - Toners - Seguridad Informática - UPS</p> 
+                <p>PC Escritorio - Notebooks - Monitores - Impresoras </p>
+                <p>Accesorios - Teclados - Mouses - Parlantes - Conectividad</p>
+                <p>Insumos - Cartuchos - Tintas - Toners - Seguridad Informática - UPS</p> 
                 <p>Estabilizadores - Software</p>
 				<p>  </p>
 				<p><strong>Servicio Técnico especializado </strong></p> 
@@ -142,7 +170,7 @@
                 </div>
                 <div class="service-box">
                     <h3>Reparación de Equipos</h3>
-                    <p>Reparamos PC, notebooks, impresoras, monitores, garantizando un servicio técnico de calidad y confianza.</p>
+                    <p>Reparamos PC, notebooks e impresoras, monitores, garantizando un servicio técnico de calidad y confianza.</p>
                 </div>
                 <div class="service-box">
                     <h3>Recuperación de Datos</h3>
@@ -174,10 +202,12 @@
         </div>
     </main>
 
+    <!-- Pie de página -->
     <footer>
         <p>&copy; 2024 Zona Multimedia</p>
     </footer>
 
+    <!-- Scripts JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const sections = document.querySelectorAll('.section');
@@ -192,7 +222,7 @@
 
             links.forEach(link => {
                 link.addEventListener('click', function (event) {
-                    event.preventDefault(); 
+                    event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
                     const sectionId = this.id.replace('-link', '');
                     showSection(sectionId);
                 });
