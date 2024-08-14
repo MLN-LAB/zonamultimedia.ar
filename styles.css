@@ -137,8 +137,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    clear: both; /* Asegura que el footer esté debajo de todo */
-}
+    clear: both; 
 
 footer p {
     margin: 0;
