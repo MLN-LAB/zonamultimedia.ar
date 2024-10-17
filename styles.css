@@ -41,14 +41,14 @@ header {
 }
 
 .top-nav a {
-    color: #fff;
+    color: #00aaff; /* Mejor contraste */
     text-decoration: none;
     font-size: 1.2rem;
     transition: all 0.3s ease;
 }
 
 .top-nav a:hover {
-    text-decoration: underline;
+    color: #ffcc00; /* Color destacado en hover */
 }
 
 .sidebar {
@@ -75,6 +75,11 @@ header {
 
 .sidebar ul li {
     margin-bottom: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Efecto hover en barra lateral */
 }
 
 .main {
@@ -138,8 +143,41 @@ footer {
     text-align: center;
     padding: 1rem 0;
     clear: both; 
+}
 
 footer p {
     margin: 0;
     font-size: 0.9rem;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto; /* Permite que crezca según el contenido */
+        position: relative;
+        top: auto; /* Resetea la posición sticky */
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .product-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-tab {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .top-nav a {
+        font-size: 1rem;
+    }
 }
