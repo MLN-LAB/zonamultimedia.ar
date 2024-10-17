@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R2XZBXWKDW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-R2XZBXWKDW');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VC6KNMH4R7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VC6KNMH4R7');
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,18 +24,42 @@
         }
 
         header {
-            background-color: #031633;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 10px 20px; 
+            display: flex; 
+            align-items: center; 
             margin-bottom: 20px; 
+            font-size: 18px;
+        }
+
+        .logo-container {
+            flex: 0 0 auto; 
+        }
+
+        .title-container {
+            flex: 1; 
+            text-align: center; 
+        }
+
+        header img {
+            max-width: 100px; 
+            height: auto; 
+            margin-right: 20px; 
+        }
+
+        h1 {
+            margin: 0; 
         }
 
         .topbar {
-            background-color: #333;
-            color: #fff;
+            background-color: #0056B3;
+            color: #000000;
             text-align: center;
-            padding: 10px 0;
+            padding: 10px 20px; 
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
         }
 
         .topbar a {
@@ -51,12 +73,25 @@
             color: #007BFF;
         }
 
-        nav {
-            text-align: right; 
-            margin-right: 20px;
-            margin-left: auto; 
-            margin-bottom: 10px; 
+        .contact-info {
+            display: flex;
+            align-items: center;
         }
+
+        .contact-info span {
+            margin-right: 10px;
+            color: #fff; 
+        }
+
+        nav {
+			display: flex;
+			justify-content: flex-end; 
+			align-items: center;
+			margin-right: 20px;
+			margin-left: auto; 
+			margin-bottom: 10px;
+			height: 15px; 
+		}
 
         nav a {
             color: #333;
@@ -73,6 +108,7 @@
         main {
             padding: 20px;
             min-height: 60vh; 
+			background-color: #FFFFFF; 
         }
 
         .section {
@@ -116,25 +152,42 @@
         }
 
         footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: relative; 
-            bottom: 0;
-            width: 100%;
+			background-color: #0056B3;
+			color: #FFFFFF;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 10px 0;
+			position: relative; 
+			bottom: 0;
+			width: 100%;
+			height: 25px;
+
         }
     </style>
 </head>
 <body>
     <!-- Barra superior -->
     <div class="topbar">
-        <a href="#">Hardware & Software</a>
+        <div class="hardware-software">
+            <a href="#">Hardware & Software</a>
+        </div>
+        <div class="contact-info">
+            <span>Tel: 3467-414738</span>
+            <a href="https://api.whatsapp.com/send?phone=5493467414738&text=Hola, tengo una consulta!" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 24px; height: 24px;">
+            </a>
+        </div>
     </div>
 
     <!-- Encabezado -->
     <header>
-        <h1>Zona Multimedia</h1>
+        <div class="logo-container">
+            <img src="https://github.com/MLN-LAB/zonamultimedia1/blob/main/logo.jpg?raw=true" alt="Logo Zona Multimedia"> 
+        </div>
+        <div class="title-container">
+            <h1>Zona Multimedia</h1>
+        </div>
     </header>
 
     <!-- Navegación principal -->
@@ -159,10 +212,11 @@
             </div>
         </div>
 
-        <div id="productos" class="section">
-            <h2>Productos</h2>
-            <p>Visítenos en Facebook <a href="https://www.facebook.com/zonamultimedia.com.ar/">Facebook</a></p>
-        </div>
+       <div id="productos" class="section">
+			<h2>Productos</h2>
+			<p>Visítenos en Facebook <a href="https://www.facebook.com/zonamultimedia.com.ar/">Facebook</a></p>
+			<p>Consúltenos</p> 
+		</div>
 
         <div id="servicio" class="section">
             <h2>Servicio Técnico</h2>
@@ -185,11 +239,11 @@
                 </div>
                 <div class="service-box">
                     <h3>Copias de Seguridad</h3>
-                    <p>Configuramos sistemas de copias de seguridad automáticas para proteger la información crucial de tu empresa.</p>
+                    <p>Configuramos sistemas de copias de seguridad automáticas para proteger la información crucial de su empresa.</p>
                 </div>
                 <div class="service-box">
                     <h3>Análisis de Virus</h3>
-                    <p>Detectamos y eliminamos virus informáticos, protegiendo tus equipos y datos contra amenazas cibernéticas.</p>
+                    <p>Detectamos y eliminamos virus informáticos, protegiendo sus equipos y datos.</p>
                 </div>
             </div>
         </div>
@@ -214,39 +268,24 @@
         <p>&copy; 2024 Zona Multimedia</p>
     </footer>
 
-    <!-- Scripts JavaScript -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const sections = document.querySelectorAll('.section');
-            const links = document.querySelectorAll('nav a');
+        // Función para cambiar de sección
+        const sections = document.querySelectorAll('.section');
+        const links = document.querySelectorAll('nav a');
 
-            function showSection(id) {
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = e.target.id.replace('-link', '');
                 sections.forEach(section => {
                     section.classList.remove('active');
                 });
-                document.getElementById(id).classList.add('active');
-            }
+                document.getElementById(targetId).classList.add('active');
 
-            links.forEach(link => {
-                link.addEventListener('click', function (event) {
-                    event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
-                    const sectionId = this.id.replace('-link', '');
-                    showSection(sectionId);
+                links.forEach(link => {
+                    link.classList.remove('active');
                 });
-            });
-
-            document.getElementById('contact-form').addEventListener('submit', function (event) {
-                event.preventDefault();
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const message = document.getElementById('message').value;
-
-                if (name && email && message) {
-                    alert(`Gracias por contactarnos, ${name}. Te responderemos pronto.`);
-                    document.getElementById('contact-form').reset();
-                } else {
-                    alert('Por favor, completa todos los campos del formulario.');
-                }
+                e.target.classList.add('active');
             });
         });
     </script>
