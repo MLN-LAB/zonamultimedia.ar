@@ -81,6 +81,7 @@ nav ul {
     justify-content: center; /* Centrar el menú */
     padding: 0; /* Quitar padding */
     margin: 0; /* Quitar margen */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples líneas */
 }
 
 nav li {
@@ -212,5 +213,19 @@ footer {
     .menu-icon {
         display: flex; /* Mostrar icono del menú hamburguesa */
         flex-direction: column; /* Colocar las líneas en columna */
+    }
+}
+
+/* Estilos para mejorar el menú en móviles */
+@media (max-width: 480px) {
+    nav ul {
+        flex-wrap: nowrap; /* No permitir que los elementos se envuelvan */
+        justify-content: flex-start; /* Alinear a la izquierda */
+    }
+
+    nav li {
+        flex: 1; /* Hacer que los elementos del menú ocupen el mismo espacio */
+        text-align: center; /* Centrar texto */
+        min-width: 80px; /* Ancho mínimo para evitar que se corten los nombres */
     }
 }
