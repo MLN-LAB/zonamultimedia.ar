@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('.section');
     const links = document.querySelectorAll('nav a');
+    const menuIcon = document.querySelector('.menu-icon'); // Agregado
+    const navMenu = document.querySelector('nav ul'); // Agregado
 
     function showSection(id) {
         sections.forEach(section => {
@@ -13,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         link.addEventListener('click', function () {
             const sectionId = this.id.replace('-link', '');
             showSection(sectionId);
+            navMenu.classList.remove('show'); // Ocultar menú al hacer clic
         });
     });
 
@@ -33,5 +36,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // Mostrar la sección de servicio técnico al hacer clic en el enlace correspondiente
     document.getElementById('servicio-tecnico-link').addEventListener('click', function () {
         showSection('servicio-tecnico');
+    });
+
+    // Agregar funcionalidad al menú hamburguesa
+    menuIcon.addEventListener('click', function () {
+        navMenu.classList.toggle('show'); // Alternar la clase para mostrar el menú
     });
 });
