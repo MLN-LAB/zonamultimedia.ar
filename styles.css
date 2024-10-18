@@ -123,7 +123,8 @@ nav ul.hidden {
 }
 
 nav ul.show {
-    display: block; /* Mostrar menú en móviles */
+    display: flex; /* Cambiar a flex para que se muestre correctamente */
+    flex-direction: column; /* Colocar el menú en columna */
     position: absolute; /* Posicionamiento absoluto */
     top: 100%; /* Justo debajo del menú */
     left: 0; /* Alinear a la izquierda */
@@ -216,11 +217,9 @@ footer {
     }
 }
 
-/* Estilos para mejorar el menú en móviles */
 @media (max-width: 480px) {
-    nav ul {
-        flex-wrap: nowrap; /* No permitir que los elementos se envuelvan */
-        justify-content: flex-start; /* Alinear a la izquierda */
+    nav ul.show {
+        padding: 0; /* Sin padding en el menú desplegable */
     }
 
     nav li {
