@@ -1,1 +1,23 @@
-document.addEventListener('DOMContentLoaded',function(){const n=document.getElementById('nav-list'),m=document.getElementById('mobile-menu');m.addEventListener('click',function(){n.classList.toggle('active')});const c=document.querySelectorAll('.section'),l=document.querySelectorAll('.nav-list a');l.forEach(e=>{e.addEventListener('click',function(e){e.preventDefault();const t=this.id.replace('-link','');c.forEach(s=>{s.classList.remove('active')});document.getElementById(t).classList.add('active')})})});
+document.addEventListener('DOMContentLoaded', function () {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navList = document.getElementById('nav-list');
+
+    mobileMenu.addEventListener('click', function () {
+        navList.classList.toggle('active'); // Alternar la clase 'active' para mostrar/ocultar el menú
+    });
+
+    const sections = document.querySelectorAll('.section');
+    const navLinks = document.querySelectorAll('.nav-list a');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.id.replace('-link', '');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(targetId).classList.add('active');
+            navList.classList.remove('active'); // Ocultamos el menú al hacer clic en un enlace
+        });
+    });
+});
