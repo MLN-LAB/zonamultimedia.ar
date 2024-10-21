@@ -10,12 +10,14 @@
     </script>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zona Multimedia</title>
-    <link rel="icon" href="https://www.dropbox.com/scl/fi/dh0cbx2pk30klogfq4zdg/zm.ico?rlkey=8f14kg1qwilazd65nw6d0yicc&raw=1" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Zona Multimedia</title>
+	<link rel="icon" href="https://www.dropbox.com/scl/fi/dh0cbx2pk30klogfq4zdg/zm.ico?rlkey=8f14kg1qwilazd65nw6d0yicc&raw=1" type="image/x-icon">
+	<link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
+ 
     <div class="topbar">
         <div class="hardware-software">
             <a href="#">Hardware & Software</a>
@@ -28,14 +30,15 @@
         </div>
     </div>
 
-    <header>
-        <div class="logo-container">
-            <img src="https://www.dropbox.com/scl/fi/zi8cdm6jb4a2kd9twv0ud/logo.jpg?rlkey=4ta51r83lw7krp46qfebnpmio&raw=1" alt="Logo Zona Multimedia">
-        </div>
-        <div class="title-container">
-            <h1>Zona Multimedia</h1>
-        </div>
-    </header>
+   <header>
+    <div class="logo-container">
+        <img src="https://www.dropbox.com/scl/fi/zi8cdm6jb4a2kd9twv0ud/logo.jpg?rlkey=4ta51r83lw7krp46qfebnpmio&raw=1" alt="Logo Zona Multimedia">
+    </div>
+    <div class="title-container">
+        <h1>Zona Multimedia</h1>
+    </div>
+</header>
+
 
     <nav>
         <div class="menu-toggle" id="mobile-menu">
@@ -87,7 +90,7 @@
                 </div>
                 <div class="service-box">
                     <h3>Recuperación de Datos</h3>
-                    <p>Recuperamos datos perdidos debido a fallos técnicos o errores humanos, utilizando herramientas avanzadas.</p>
+                    <p>Recuperamos datos perdidos en unidades de almatenamiento.</p>
                 </div>
                 <div class="service-box">
                     <h3>Copias de Seguridad</h3>
@@ -101,43 +104,48 @@
         </div>
 
         <div id="contacto" class="section">
-            <h2>Contacto</h2>
-            <div class="form-container"> 
-                <form id="contact-form">
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" required>
+		<h2>Contacto</h2>
+		<div class="form-container"> 
+			<form id="contact-form">
+				<label for="name">Nombre:</label>
+				<input type="text" id="name" name="name" required>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
 
-                    <label for="phone">Celular:</label>
-                    <input type="tel" id="phone" name="phone" required>
+				<label for="phone">Celular:</label>
+				<input type="tel" id="phone" name="phone" required>
 
-                    <label for="message">Detalle:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
+				<label for="message">Detalle:</label>
+				<textarea id="message" name="message" rows="4" required></textarea>
 
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-        </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</div>
 
-        <script>
-            const contactForm = document.getElementById('contact-form');
+<script>
+    const contactForm = document.getElementById('contact-form');
 
-            contactForm.addEventListener('submit', (event) => {
-                event.preventDefault(); 
+    contactForm.addEventListener('submit', (event) => {
+        event.preventDefault(); 
 
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const phone = document.getElementById('phone').value;
-                const message = document.getElementById('message').value;
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const message = document.getElementById('message').value;
 
-                const userMessage = `CONTACTO WEB:\nNombre: ${name}\nEmail: ${email}\nCelular: ${phone}\nDetalle: ${message}`;
-                const encodedMessage = encodeURIComponent(userMessage);
+        
+        const userMessage = `CONTACTO WEB:\nNombre: ${name}\nEmail: ${email}\nCelular: ${phone}\nDetalle: ${message}`;
+        const encodedMessage = encodeURIComponent(userMessage);
 
-                window.open(`https://api.whatsapp.com/send?text=${encodedMessage}`, '_blank');
-            });
-        </script>
+       
+        window.open(`https://api.whatsapp.com/send?text=${encodedMessage}`, '_blank');
+    });
+</script>
+
+
+
     </main>
 
     <footer>
